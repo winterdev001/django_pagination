@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<!--index.html-->
+
+{% if authors %}
+<h1>Authors</h1>
+<table class="table table-borderless">
+    <thead>
+        <th>Name</th>
+    </thead>
+    {% endif %}
+    {% for author in authors %}
+            <tr>
+                <td>{{ author.name }}</td>
+                <td >
+                <a href="{% url 'detail' author.id %}">Detail</a>  
+                <a href="{% url 'edit' author.id %}">Edit</a>
+                <a href="{% url 'delete' author.id %}">Delete</a>
+            </td>
+            </tr>
+    {% endfor %}
+</table>
+<br>
+<a href="{% url 'create' %}">New Author</a>
+
+{% endblock %}

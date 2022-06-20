@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<!--detail.html-->    
+    <p>
+        <strong>Name:</strong>
+        {{ author.name }}
+    </p>
+
+    <a href="{% url 'index' %}">Back</a> |
+    <a href="{% url 'edit' author.id %}">Edit</a>
+
+{% endblock %}
