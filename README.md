@@ -1,4 +1,4 @@
-# Django Favorite Function Sample App
+# Django Pagination Sample App
 
 This is a Django CRUD operations sample app to use implementing pagination functionality.
 
